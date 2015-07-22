@@ -3,7 +3,7 @@ node_js:
   - "0.12"
 sudo: false
 script: "npm run-script test-ci"
-after_script: "npm install coveralls && cat ./coverage/lcov.info | coveralls"
+after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
 cache:
   directories:
     - node_modules
