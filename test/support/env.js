@@ -1,4 +1,4 @@
 "use strict";
 
 var chai		= require("chai");
-chai.should();
+global.should	= chai.should();

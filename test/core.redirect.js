@@ -9,7 +9,7 @@ describe("redirect", function() {
 
 	describe(".redirect(from, to)", function() {
 		it("should add the redirect", function() {
-			var obsidian = new Obsidian();
+			var obsidian = new Obsidian;
 
 			obsidian._redirects.should.be.empty;
 			obsidian.redirect("/initial-path", "/new-path");
@@ -17,7 +17,7 @@ describe("redirect", function() {
 		});
 
 		it("should do nothing with an invalid parameter", function() {
-			var obsidian = new Obsidian();
+			var obsidian = new Obsidian;
 
 			obsidian._redirects.should.be.empty;
 			obsidian.redirect();	// No params
@@ -29,7 +29,7 @@ describe("redirect", function() {
 
 	describe(".redirect(paths)", function() {
 		it("should add multiple redirects", function() {
-			var obsidian = new Obsidian();
+			var obsidian = new Obsidian;
 
 			obsidian._redirects.should.be.empty;
 			obsidian.redirect({
