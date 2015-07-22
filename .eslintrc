@@ -1,0 +1,57 @@
+{
+	"env": {
+		node: true
+	},
+	"rules": {
+		"strict": [2, "global"],
+
+		// Extra rules
+		"no-extra-parens": 2,
+		"no-unexpected-multiline": 2,
+		"accessor-pairs": 2,
+		"block-scoped-var": 2,
+		"default-case": 2,				// Lets see how this goes for now
+		"dot-location": [2, "property"],
+		"no-floating-decimal": 2,
+		"no-param-reassign": 2,
+		"no-process-env": 2,		// Disable in config file
+		"no-self-compare": 2,
+		"no-throw-literal": 2,
+		"no-void": 2,
+		"no-undefined": 2,
+		"no-sync": 2,
+		"valid-jsdoc": [2, {
+			"prefer": {
+				"return": "returns"
+			}
+		}],
+
+		// Node.js Rules
+		"handle-callback-err": 0,
+
+		// Style rules
+		"array-bracket-spacing": 1,
+		"brace-style": [1, "stroustrup", {"allowSingleLine": true}],
+		"comma-style": 1,
+		"computed-property-spacing": 1,
+		"consistent-this": [1, "self"],
+		"indent": [1, "tab"],
+		"no-lonely-if": 1,
+		"no-nested-ternary": 1,
+		"no-underscore-dangle": 0,
+		"no-unneeded-ternary": 1,
+		"object-curly-spacing": 1,
+		"operator-assignment": [1, "always"],
+		"operator-linebreak": [1, "before"],
+		"padded-blocks": [1, "never"],
+		"quote-props": [1, "as-needed"],
+		"space-after-keywords": [1, "always"],
+		"space-before-blocks": [1, "always"],
+		"space-before-function-paren": [1, "never"],
+		"space-in-parens": 1,
+		"spaced-comment": [1, "always"],
+
+		// Helpers
+		"no-warning-comments": [1, {"terms": ["todo"], "location": "start"}]
+	}
+}

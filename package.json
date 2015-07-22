@@ -1,0 +1,41 @@
+{
+  "name": "obsidian",
+  "version": "0.0.1",
+  "description": "A CMS/Blogging engine.",
+  "bugs": {
+    "url": "https://github.com/Nulifier/Obsidian/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require test/support/env --reporter spec test/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter spec test/",
+    "lint": "eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nulifier/Obsidian.git"
+  },
+  "keywords": [
+    "cms",
+    "blog",
+    "express"
+  ],
+  "author": "Nulifier",
+  "license": "MIT",
+  "homepage": "https://github.com/Nulifier/Obsidian#readme",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "compression": "^1.5.1",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "multer": "^1.0.1",
+    "sequelize": "^3.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^0.24.1",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5"
+  }
+}
