@@ -1,3 +1,5 @@
 "use strict";
 
-module.exports = require("./lib/obsidian");
+var Obsidian	= require("./lib/obsidian");
+
+module.exports = new Obsidian();
