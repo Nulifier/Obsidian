@@ -29,7 +29,6 @@
     "compression": "^1.5.1",
     "express": "^4.13.1",
     "lodash": "^3.10.0",
-    "multer": "^1.0.1",
     "sequelize": "^3.4.1"
   },
   "devDependencies": {
