@@ -10,7 +10,7 @@
     "test": "mocha --require test/support/env --reporter spec test/",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter spec test/",
-    "lint": "eslint lib"
+    "lint": "eslint lib/ test/"
   },
   "repository": {
     "type": "git",

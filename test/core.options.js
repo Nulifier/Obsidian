@@ -10,7 +10,7 @@ describe("options", function() {
 		});
 
 		it("should set the option to the value", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			obsidian._options.should.not.have.property("test-asdf-prop");
 			obsidian.set("test-asdf-prop", "a value");
@@ -18,7 +18,7 @@ describe("options", function() {
 		});
 
 		it("should return this", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			var retValue = obsidian.set("a", "b");
 			retValue.should.equal(obsidian);
@@ -31,7 +31,7 @@ describe("options", function() {
 		});
 
 		it("should return the option", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			obsidian._options["test-asdf-prop"] = "a value";
 			var opt = obsidian.get("test-asdf-prop");
@@ -39,7 +39,7 @@ describe("options", function() {
 		});
 
 		it("should return undefined for unset options", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			obsidian._options.should.not.have.property("test-asdf-prop");
 			var opt = obsidian.get("test-asdf-prop");
@@ -53,7 +53,7 @@ describe("options", function() {
 		});
 
 		it("should set the option to true", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			obsidian._options.should.not.have.property("test-asdf-prop");
 			obsidian.enable("test-asdf-prop");
@@ -61,7 +61,7 @@ describe("options", function() {
 		});
 
 		it("should return this", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			var retValue = obsidian.enable("a");
 			retValue.should.equal(obsidian);
@@ -74,7 +74,7 @@ describe("options", function() {
 		});
 
 		it("should set the option to false", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			obsidian._options.should.not.have.property("test-asdf-prop");
 			obsidian.disable("test-asdf-prop");
@@ -82,7 +82,7 @@ describe("options", function() {
 		});
 
 		it("should return this", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 
 			var retValue = obsidian.disable("a");
 			retValue.should.equal(obsidian);
@@ -95,29 +95,29 @@ describe("options", function() {
 		});
 
 		it("should return true if the option is enabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", true);
 			obsidian.enabled("a").should.be.true;
 		});
 
 		it("should return false if the options is disabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", false);
 			obsidian.enabled("a").should.be.false;
 		});
 
 		it("should interpret a \"truthy\" value as enabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", "test");
 			obsidian.enabled("a").should.be.true;
 		});
 
 		it("should interpret a \"falsy\" value as disabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", NaN);
 			obsidian.enabled("a").should.be.false;
 		});
-	})
+	});
 
 	describe(".disabled(key)", function() {
 		it("should exist", function() {
@@ -125,29 +125,29 @@ describe("options", function() {
 		});
 
 		it("should return false if the option is enabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", true);
 			obsidian.disabled("a").should.be.false;
 		});
 
 		it("should return true if the options is disabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", false);
 			obsidian.disabled("a").should.be.true;
 		});
 
 		it("should interpret a \"truthy\" value as enabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", []);
 			obsidian.disabled("a").should.be.false;
 		});
 
 		it("should interpret a \"falsy\" value as disabled", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.set("a", "");
 			obsidian.disabled("a").should.be.true;
 		});
-	})
+	});
 
 	describe(".options(opts)", function() {
 		it("should exist", function() {
@@ -155,7 +155,7 @@ describe("options", function() {
 		});
 
 		it("should set multiple options", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			obsidian.options({
 				a: "doe rei mei",
 				b: 47
@@ -165,25 +165,25 @@ describe("options", function() {
 		});
 
 		it("should return all the options if opts is not provided", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			var opts = obsidian.options();
 			obsidian._options.should.equal(opts);
 		});
 
 		it("should do nothing if opts is not a plain object", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			var oldOpts = _.clone(obsidian._options);
 
 			obsidian.options([1, 2, 3]);
-			obsidian.options(new Obsidian);
+			obsidian.options(new Obsidian());
 
 			obsidian._options.should.deep.equal(oldOpts);
 		});
 
 		it("should return this if opts is provided", function() {
-			var obsidian = new Obsidian;
+			var obsidian = new Obsidian();
 			var ret = obsidian.options({});
 			ret.should.equal(obsidian);
-		})
+		});
 	});
 });

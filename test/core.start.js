@@ -11,7 +11,7 @@ describe("start", function() {
 			logging: false
 		},
 		routes: function() {}
-	}
+	};
 
 	it("should fail if the app isn't initialized", function() {
 		var obsidian = new Obsidian();

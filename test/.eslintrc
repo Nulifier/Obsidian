@@ -1,0 +1,12 @@
+{
+	"env": {
+		"mocha": true
+	},
+	"globals": {
+		"should": false
+	},
+	"rules": {
+		// Should assertions break this
+		"no-unused-expressions": 0
+	}
+}

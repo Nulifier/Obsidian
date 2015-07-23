@@ -18,7 +18,7 @@
 		"no-self-compare": 2,
 		"no-throw-literal": 2,
 		"no-void": 2,
-		"no-undefined": 2,
+		"no-undefined": 0,
 		"no-sync": 2,
 		"valid-jsdoc": [2, {
 			"prefer": {

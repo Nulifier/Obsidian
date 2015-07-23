@@ -1,22 +1,17 @@
 "use strict";
 
 var _			= require("lodash");
-var Obsidian	= require("../lib/obsidian");
 var initDb		= require("../lib/core/initDb");
-var Sequelize	= require("sequelize");
 
 describe("initDb", function() {
 	var fakeThis = {
-		"_database": {
+		_database: {
 			dialect: "sqlite",
 			logging: false
 		},
 		get: function(key) {
 			if (key === "database") {
-				return this["_database"];
-			}
-			else {
-				return undefined;
+				return this._database;
 			}
 		}
 	};
@@ -29,7 +24,7 @@ describe("initDb", function() {
 
 	it("should create a sequelize object from a config string", function() {
 		var obsidian = _.defaults({
-			"_database": "sqlite://::memory::"
+			_database: "sqlite://::memory::"
 		}, fakeThis);
 		initDb.call(obsidian);
 		should.exist(obsidian.sequelize);
@@ -46,7 +41,7 @@ describe("initDb", function() {
 
 	it("should throw an error if the config is neither a plain object or string", function() {
 		var obsidian = _.defaults({
-			"_database": [1, 2, 3]
+			_database: [1, 2, 3]
 		}, fakeThis);
 
 		var thrown = false;
