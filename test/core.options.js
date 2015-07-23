@@ -23,6 +23,13 @@ describe("options", function() {
 			var retValue = obsidian.set("a", "b");
 			retValue.should.equal(obsidian);
 		});
+
+		it("should set this.app when the key is app", function() {
+			var obsidian = new Obsidian();
+
+			obsidian.set("app", "unique string");
+			obsidian.app.should.equal("unique string");
+		});
 	});
 
 	describe(".get(key)", function() {
