@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 
 var formatError		= require("../lib/helpers/formatError");
 

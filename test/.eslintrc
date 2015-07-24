@@ -3,7 +3,8 @@
 		"mocha": true
 	},
 	"globals": {
-		"should": false
+		"should": false,
+		"sinon": false
 	},
 	"rules": {
 		// Should assertions break this

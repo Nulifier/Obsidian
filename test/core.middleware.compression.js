@@ -4,7 +4,6 @@ var compression	= require("../lib/core/middleware/1-compression");
 
 describe("core.middleware.compression", function() {
 	var fakeThis;
-	var compressEnabled
 
 	beforeEach("create fake this", function() {
 		fakeThis = {
@@ -12,7 +11,7 @@ describe("core.middleware.compression", function() {
 			app: {
 				use: sinon.spy()
 			}
-		}
+		};
 	});
 
 	it("should be a function", function() {
