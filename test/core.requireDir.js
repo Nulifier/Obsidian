@@ -29,4 +29,11 @@ describe("requireDir", function() {
 
 		calledWithPath.should.be.true;
 	});
+
+	it("should not require files that aren't requireable", function() {
+		var obsidian = new Obsidian();
+
+		var reqs = obsidian.requireDir(__dirname, "../test");
+		reqs.should.not.include.keys(".eslintrc");
+	});
 });
