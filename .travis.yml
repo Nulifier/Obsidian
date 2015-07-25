@@ -3,7 +3,13 @@ node_js:
   - "0.12"
 sudo: false
 script: "npm run-script test-ci"
-after_script: "npm install coveralls && cat ./coverage/lcov.info | coveralls"
+after_script:
+  - npm install coveralls codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
+  - cat ./coverage/lcov.info | coveralls
 cache:
   directories:
     - node_modules
+addons:
+  code_climate:
+    repo_token: 8c70a6f6643b55cf7ea4c6069f3c0a19682657c765cb20eeb4f0846029cf65ef
