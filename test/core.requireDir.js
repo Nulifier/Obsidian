@@ -3,7 +3,7 @@
 var Obsidian	= require("../lib/obsidian");
 var path		= require("path");
 
-describe("requireDir", function() {
+describe("core.requireDir", function() {
 	it("should exist", function() {
 		Obsidian.should.respondTo("requireDir");
 	});

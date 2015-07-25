@@ -3,7 +3,7 @@
 var _			= require("lodash");
 var initDb		= require("../lib/core/initDb");
 
-describe("initDb", function() {
+describe("core.initDb", function() {
 	var fakeThis = {
 		_database: {
 			dialect: "sqlite",

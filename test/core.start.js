@@ -3,7 +3,7 @@
 var _			= require("lodash");
 var Obsidian	= require("../lib/obsidian");
 
-describe("start", function() {
+describe("core.start", function() {
 	var initOptions = {
 		port: 12345,
 		database: {

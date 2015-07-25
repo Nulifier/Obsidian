@@ -2,7 +2,7 @@
 
 var formatError		= require("../lib/helpers/formatError");
 
-describe("formatError", function() {
+describe("helpers.formatError", function() {
 	it("should be a function", function() {
 		formatError.should.be.a("function");
 	});

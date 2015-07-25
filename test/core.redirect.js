@@ -2,7 +2,7 @@
 
 var Obsidian	= require("../lib/obsidian");
 
-describe("redirect", function() {
+describe("core.redirect", function() {
 	it("should have a redirect function", function() {
 		Obsidian.should.respondTo("redirect");
 	});

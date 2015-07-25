@@ -3,7 +3,7 @@
 var _			= require("lodash");
 var Obsidian	= require("../lib/obsidian");
 
-describe("options", function() {
+describe("core.options", function() {
 	describe(".set(key, value)", function() {
 		it("should exist", function() {
 			Obsidian.should.respondTo("set");
