@@ -1,6 +1,6 @@
 "use strict";
 
-var staticMiddleware	= require("../lib/core/middleware/4-static");
+var staticMiddleware	= require("../lib/core/middleware/static");
 
 describe("core.middleware.static", function() {
 	var fakeThis;

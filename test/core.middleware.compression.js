@@ -1,6 +1,6 @@
 "use strict";
 
-var compression	= require("../lib/core/middleware/1-compression");
+var compression	= require("../lib/core/middleware/compression");
 
 describe("core.middleware.compression", function() {
 	var fakeThis;

@@ -1,8 +1,8 @@
 "use strict";
 
-var bodyParser	= require("../lib/core/middleware/5-bodyParser");
+var bodyParser	= require("../lib/core/middleware/body-parser");
 
-describe("core.middleware.bodyParser", function() {
+describe("core.middleware.body-parser", function() {
 	it("should export a function", function() {
 		bodyParser.should.be.a("function");
 	});
