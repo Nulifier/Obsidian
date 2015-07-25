@@ -28,6 +28,7 @@
     "body-parser": "^1.13.2",
     "compression": "^1.5.1",
     "express": "^4.13.1",
+    "jade": "^1.11.0",
     "lodash": "^3.10.0",
     "parent-require": "^1.0.0",
     "sequelize": "^3.4.1"
