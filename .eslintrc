@@ -5,6 +5,8 @@
 	"rules": {
 		"strict": [2, "global"],
 
+		"no-console": 2,
+
 		// Extra rules
 		"no-extra-parens": 2,
 		"no-unexpected-multiline": 2,

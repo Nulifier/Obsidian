@@ -26,8 +26,10 @@
   "homepage": "https://github.com/Nulifier/Obsidian#readme",
   "dependencies": {
     "body-parser": "^1.13.2",
+    "bunyan": "^1.4.0",
     "compression": "^1.5.1",
     "express": "^4.13.1",
+    "express-bunyan-logger": "^1.1.1",
     "jade": "^1.11.0",
     "lodash": "^3.10.0",
     "parent-require": "^1.0.0",
