@@ -1,7 +1,6 @@
 "use strict";
 
 var err404		= require("../lib/routes/404");
-var express		= require("express");
 
 // Just a fake member function for use with sinon
 function memberFunc() {
@@ -52,7 +51,7 @@ describe("routes.404", function() {
 	});
 
 	it("should call the next function with an error if there is one", function() {
-		var routeHandler = function() {throw new Error("failed")};
+		var routeHandler = function() {throw new Error("failed"); };
 		res.locals.obsidian.get.withArgs("404").returns(routeHandler);
 
 		err404(req, res, next);
