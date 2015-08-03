@@ -57,7 +57,7 @@ describe("routes.404", function() {
 		err404(req, res, next);
 
 		next.should.be.called;
-		next.firstCall.args[0].should.be.a("Error");
+		next.firstCall.args[0].should.be.an("Error");
 	});
 
 	it("should call the default 404 handler if none is given", function() {

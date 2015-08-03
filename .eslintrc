@@ -15,7 +15,7 @@
 		"default-case": 2,				// Lets see how this goes for now
 		"dot-location": [2, "property"],
 		"no-floating-decimal": 2,
-		"no-param-reassign": 2,
+		"no-param-reassign": 0,
 		"no-process-env": 2,		// Disable in config file
 		"no-self-compare": 2,
 		"no-throw-literal": 2,
