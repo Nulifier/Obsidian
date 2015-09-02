@@ -37,7 +37,6 @@
     "bunyan": "^1.4.0",
     "compression": "^1.5.1",
     "express": "^4.13.1",
-    "express-bunyan-logger": "^1.1.1",
     "jade": "^1.11.0",
     "knex": "^0.8.6",
     "lodash": "^3.10.0"
@@ -48,20 +47,24 @@
     "babel-loader": "5.3.x",
     "chai": "3.2.x",
     "eslint": "0.24.x",
+    "exports-loader": "^0.6.2",
+    "imports-loader": "^0.6.4",
     "istanbul": "^0.3.17",
     "less": "^2.5.1",
     "less-plugin-clean-css": "^1.5.1",
     "mocha": "^2.2.5",
     "react": "^0.14.0-beta3",
     "react-dom": "^0.14.0-beta3",
-    "react-redux": "^0.2.2",
+    "react-redux": "2.0.x",
     "react-router": "^1.0.0-beta3",
-    "redux": "^1.0.0",
-    "redux-devtools": "^1.0.0",
+    "redux": "2.0.x",
+    "redux-devtools": "2.0.x",
     "redux-react-router": "^0.4.0",
+    "redux-thunk": "^0.1.0",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
     "sqlite3": "^3.0.9",
-    "webpack": "^1.10.5"
+    "webpack": "^1.10.5",
+    "whatwg-fetch": "^0.9.0"
   }
 }
