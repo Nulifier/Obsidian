@@ -1,8 +1,23 @@
 {
 	"ecmaFeatures": {
-		"modules": true
+		"modules": true,
+		"jsx": true
 	},
+	"plugins": [
+		"react"
+	],
 	"env": {
 		"es6": true
+	},
+	"rules": {
+		// Default disables
+		"no-extra-parens": 0,	// Doesn't work with JSX syntax
+		"no-console": 1,		// Just a warning
+
+		// EMCA6 Rules
+		"no-var": 2,
+
+		// React Rules
+		"react/wrap-multilines": 2
 	}
 }
