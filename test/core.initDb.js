@@ -47,14 +47,6 @@ describe("core.initDb", function() {
 		it("should load the User model", function() {
 			obsidian.models.should.have.property("User");
 		});
-
-		it("should load the Collection collection", function() {
-			obsidian.collections.should.have.property("Collection");
-		});
-
-		it("should load the Users collection", function() {
-			obsidian.collections.should.have.property("Users");
-		});
 	});
 
 	describe("premade knex instance", function() {

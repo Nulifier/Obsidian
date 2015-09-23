@@ -1,0 +1,34 @@
+@import "react-select/less/default.less";
+
+@border-color: #d9d9d9;
+
+.obs-form {
+	position: relative;
+
+	// We need the .Select-input to avoid styling the react-selector input
+	:not(.Select-input) > input, select, textarea {
+		display: block;
+		padding: 8px 10px;
+		border: 1px solid #cccccc;
+		border-color: @border-color;
+		border-radius: 4px;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	:not(.Select-input) > input, select, textarea, .obs-field {
+		width: 300px;
+	}
+
+	textarea {
+		width: 600px;
+		height: 800px;
+	}
+
+	fieldset {
+		padding: 0;
+		border: none;
+		
+		margin-bottom: 1em;
+	}
+}

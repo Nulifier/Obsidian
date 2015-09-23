@@ -1,34 +1,63 @@
-#layout.active {
-	#menu {
-		left: 150px;
-		width: 150px;
-	}
+@menu-width: 150px;
+@menu-background: #191818;
 
-	.menu-link {
-		left: 150px;
-	}
-}
-
-#layout, #menu, .menu-link {
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s east-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-}
-
-#menu {
-	margin-left: -150px;
-	width: 150px;
+.obs-menu {
+	box-sizing: border-box;
+	margin-left: -@menu-width;
+	width: @menu-width;
 	position: fixed;
+	background: @menu-background;
 	top: 0;
-	left: 0;
 	bottom: 0;
-	z-index: 1000;
-	background: #191818;
+	z-index: 3;
 	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;		// Enables inertia based scrolling on iOS
 
+	.obs-menu-heading, a {
+		text-decoration: none;
+		color: inherit;
+		white-space: nowrap;
+
+		padding: 0.5em 1em;
+		display: block;
+	}
+
+	.obs-menu-heading {
+		text-transform: uppercase;
+		color: #565d64;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	
+
+	li {
+		color: #777;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+
+		&[selected] {
+			color: #fff;
+			background-color: #1f8dd6;
+		}
+	}
+
+	ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/*#menu {
 	a {
 		color: #999;
 		border: none;
@@ -103,7 +132,7 @@
 	}
 }
 
-
+*/
 
 // Media Queries
 @media (min-width: 48em) {
