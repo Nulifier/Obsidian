@@ -61,7 +61,7 @@
     "normalize.css": "^3.0.3",
     "pluralize": "^1.2.1",
     "react": "^0.14.0-rc1",
-    "react-datepicker": "^0.12.0",
+    "react-datepicker": "git+https://git@github.com/Nulifier/react-datepicker.git",
     "react-dom": "^0.14.0-beta3",
     "react-redux": "2.1.x",
     "react-router": "^1.0.0-beta3",
