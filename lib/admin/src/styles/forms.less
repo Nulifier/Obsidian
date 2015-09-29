@@ -1,4 +1,5 @@
-@import "react-select/less/default.less";
+@import (inline) "react-select/dist/default.css";
+@import (inline) "react-datepicker/dist/react-datepicker.css";
 
 @border-color: #d9d9d9;
 
@@ -14,6 +15,8 @@
 		border-radius: 4px;
 		margin: 0;
 		box-sizing: border-box;
+		font-size: inherit;		// Overrides the font size in react-datepicker
+		box-shadow: none;		// Removes the shadow from react-datepicker
 	}
 
 	:not(.Select-input) > input, select, textarea, .obs-field {
