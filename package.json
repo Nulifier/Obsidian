@@ -1,6 +1,6 @@
 {
   "name": "obsidian",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A CMS/Blogging engine.",
   "bugs": {
     "url": "https://github.com/Nulifier/Obsidian/issues"
