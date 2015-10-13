@@ -19,7 +19,7 @@ describe("core.start", function() {
 		try {
 			obsidian.start();
 		}
-		catch(err) {
+		catch (err) {
 			err.should.be.an("Error");
 			threw = true;
 		}
