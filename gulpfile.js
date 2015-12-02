@@ -11,8 +11,8 @@ gulp.task("default", [
 
 /////////////////////////////////////////////////////////////////////
 var webpack			= require("webpack");
-var WEBPACK_DEV		= require("./lib/admin/webpack.config");
-var WEBPACK_PROD	= require("./lib/admin/webpack-prod.config");
+var WEBPACK_DEV		= require("./admin/webpack.config");
+var WEBPACK_PROD	= require("./admin/webpack-prod.config");
 
 function gulpTaskWebpack(name, config) {
 	gulp.task(name, function (callback) {

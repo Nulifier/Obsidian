@@ -6,12 +6,17 @@
     "url": "https://github.com/Nulifier/Obsidian/issues"
   },
   "main": "index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter spec test/",
     "lint": "eslint lib/ test/",
-    "build": "gulp",
-    "build:watch": "webpack -d --watch --config lib/admin/webpack.config.js"
+    "build": "babel src --out-dir lib",
+    "build:watch": "babel src --watch --out-dir lib",
+    "build-admin": "gulp",
+    "build-admin:watch": "webpack -d --watch --config admin/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,30 +32,31 @@
   "homepage": "https://github.com/Nulifier/Obsidian#readme",
   "dependencies": {
     "body-parser": "^1.13.2",
-    "bookshelf": "^0.8.1",
     "bunyan": "^1.4.0",
     "compression": "^1.5.1",
     "express": "^4.13.1",
     "express-handlebars": "^2.0.1",
-    "jade": "^1.11.0",
-    "knex": "^0.8.6",
+    "glob": "^5.0.15",
     "lodash": "^3.10.0",
-    "moment": "^2.10.6"
+    "moment": "^2.10.6",
+    "mongoose": "^4.1.11"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.0.0",
+    "babel": "5.x.x",
     "babel-core": "5.8.x",
     "babel-loader": "5.3.x",
-    "chai": "3.3.x",
-    "css-loader": "^0.19.0",
-    "eslint": "1.6.x",
+    "chai": "3.4.x",
+    "css-loader": "0.21.x",
+    "eslint": "1.8.x",
     "eslint-plugin-react": "^3.3.1",
     "exports-loader": "^0.6.2",
+    "grunt": "^0.4.5",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
-    "history": "1.12.x",
+    "history": "1.13.x",
     "imports-loader": "^0.6.4",
-    "istanbul": "^0.3.17",
+    "istanbul": "0.4.x",
     "less": "^2.5.1",
     "less-loader": "^2.2.1",
     "less-plugin-clean-css": "^1.5.1",
@@ -58,23 +64,29 @@
     "normalize.css": "^3.0.3",
     "pluralize": "^1.2.1",
     "react": "0.14.x",
-    "react-datepicker": "0.14.x",
+    "react-datepicker": "0.15.x",
     "react-dom": "0.14.x",
-    "react-redux": "3.1.x",
+    "react-redux": "4.0.x",
     "react-router": "^1.0.0-beta3",
-    "react-select": "0.7.x",
+    "react-select": "0.9.x",
     "redux": "3.0.x || 2.0.x",
     "redux-actions": "^0.8.0",
     "redux-devtools": "2.1.x",
     "redux-promise": "^0.5.0",
     "redux-router": "~1.0.0-beta3",
     "redux-thunk": "^1.0.0",
-    "sinon": "^1.15.4",
+    "sinon": "1.17.x",
     "sinon-chai": "^2.8.0",
-    "sqlite3": "^3.0.9",
-    "style-loader": "^0.12.4",
+    "style-loader": "0.13.x",
     "updeep": "0.10.x",
     "webpack": "^1.10.5",
-    "whatwg-fetch": "^0.9.0"
+    "whatwg-fetch": "0.10.x"
+  },
+  "babel": {
+    "experimental": true,
+    "retainLines": true,
+    "optional": [
+      "runtime"
+    ]
   }
 }

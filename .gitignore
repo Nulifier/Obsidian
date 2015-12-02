@@ -1,5 +1,6 @@
 /node_modules
 /coverage
 /log.json
-/lib/admin/static
-/lib/admin/webpack-assets.json
+/admin/static
+/admin/webpack-assets.json
+/lib
